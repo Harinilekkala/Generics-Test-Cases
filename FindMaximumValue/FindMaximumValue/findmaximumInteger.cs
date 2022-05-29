@@ -27,5 +27,26 @@ namespace FindMaximumValue
             return maxValue;
 
         }
+
+
+
+        public float FindMaxFloat(float firstValue, float secondValue, float thirdValue)
+        {
+            float floatMaxValue;
+            if (firstValue > secondValue && firstValue > thirdValue)
+            {
+                floatMaxValue = firstValue;
+            }
+            else if (secondValue > firstValue && secondValue > thirdValue)
+            {
+                floatMaxValue = secondValue;
+            }
+            else
+            {
+                floatMaxValue = thirdValue;
+            }
+            Console.WriteLine(floatMaxValue);
+            return floatMaxValue;
+        }
     }
 }

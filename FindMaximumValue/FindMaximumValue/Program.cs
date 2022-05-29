@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 
 public class Program
 {
-    private static object nlog;
-
-    public static object Nlog { get; private set; }
-    public static object NLog { get; private set; }
-
+    
     public static void Main(string[] args)
     {
         
@@ -19,6 +15,7 @@ public class Program
 
         FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
         findmaximumInteger.findMax(30, 20, 10);
+        findmaximumInteger.FindMaxFloat(10.5F, 20.5F, 30.5F);
 
     }
 }
