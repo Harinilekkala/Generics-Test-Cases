@@ -14,8 +14,8 @@ public class Program
         
 
         FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
-        findmaximumInteger.findMax(30, 20, 10);
-        findmaximumInteger.FindMaxFloat(10.5F, 20.5F, 30.5F);
-        findmaximumInteger.findMaxString("Apple", "Banana", "Orange");
+        findmaximumInteger.findMax<int>(30, 20, 10);
+        findmaximumInteger.findMax<float>(10.5F, 20.5F, 30.5F);
+        findmaximumInteger.findMax<string>("Apple", "Banana", "Orange");
     }
 }

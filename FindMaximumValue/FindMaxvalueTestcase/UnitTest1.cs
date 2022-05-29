@@ -3,17 +3,19 @@ namespace FindMaxvalueTestcase
     public class TestsInteger
     {
         
+        
+        
 
         [Test]
         public void Test1()
         {
             int a = 20, b = 30, c = 4;
-            
+
             FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
-            
-            var findmaxvalue = findmaximumInteger.findMax(a,b,c);
-            
-            Assert.AreEqual(b,findmaxvalue);
+
+            var findmaxvalue = findmaximumInteger.findMax(a, b, c);
+
+            Assert.AreEqual(b, findmaxvalue);
 
         }
         [Test]
@@ -41,16 +43,16 @@ namespace FindMaxvalueTestcase
 
         }
     }
-    
+
     public class TestFloat
-        
+
     {
         [Test]
         public void Testfloat1()
         {
             float A = 30.5F, B = 20.5F, C = 10.5F;
             FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
-            var findmaxvalue = findmaximumInteger.FindMaxFloat(A, B, C);
+            var findmaxvalue = findmaximumInteger.findMax(A, B, C);
             Assert.AreEqual(A, findmaxvalue);
         }
         [Test]
@@ -58,7 +60,7 @@ namespace FindMaxvalueTestcase
         {
             float A = 10.5F, B = 30.5F, C = 20.5F;
             FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
-            var findmaxvalue = findmaximumInteger.FindMaxFloat(A, B, C);
+            var findmaxvalue = findmaximumInteger.findMax(A, B, C);
             Assert.AreEqual(B, findmaxvalue);
         }
         [Test]
@@ -66,7 +68,7 @@ namespace FindMaxvalueTestcase
         {
             float A = 10.5F, B = 20.5F, C = 30.5F;
             FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
-            var findmaxvalue = findmaximumInteger.FindMaxFloat(A, B, C);
+            var findmaxvalue = findmaximumInteger.findMax(A, B, C);
             Assert.AreEqual(C, findmaxvalue);
         }
     }
@@ -77,7 +79,7 @@ namespace FindMaxvalueTestcase
         {
             string A = "Orange", B = "Banana", C = "Apple";
             FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
-            string finalResult = findmaximumInteger.findMaxString(A, B, C);
+            string finalResult = findmaximumInteger.findMax(A, B, C);
             Assert.AreEqual(A, finalResult);
         }
         [Test]
@@ -85,7 +87,7 @@ namespace FindMaxvalueTestcase
         {
             string A = "Banana", B = "Orange", C = "Apple";
             FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
-            string finalResult = findmaximumInteger.findMaxString(A, B, C);
+            string finalResult = findmaximumInteger.findMax(A, B, C);
             Assert.AreEqual(B, finalResult);
         }
         [Test]
@@ -93,9 +95,10 @@ namespace FindMaxvalueTestcase
         {
             string A = "Banana", B = "Apple", C = "Orange";
             FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
-            string finalResult = findmaximumInteger.findMaxString(A, B, C);
+            string finalResult = findmaximumInteger.findMax(A, B, C);
             Assert.AreEqual(C, finalResult);
         }
     }
+
 
 }

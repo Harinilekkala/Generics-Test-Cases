@@ -8,63 +8,30 @@ namespace FindMaximumValue
 {
     public class findmaximumInteger
     {
-        public int findMax(int firstValue, int secondValue, int thirdValue)
+        public T findMax<T>(T firstValue, T secondValue, T thirdValue) where T : IComparable<T>
         {
-            int maxValue;
-            if (firstValue > secondValue && firstValue > thirdValue)
+            int intMaxValue;
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
+                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
+                firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
             {
-                maxValue = firstValue;
+                Console.WriteLine(firstValue);
+                return firstValue;
             }
-            else if (secondValue > firstValue && secondValue > thirdValue)
+            else if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0 ||
+                secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) > 0 ||
+                    secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) >= 0)
             {
-                maxValue = secondValue;
+                Console.WriteLine(secondValue);
+                return secondValue;
             }
             else
             {
-                maxValue = thirdValue;
+                Console.WriteLine(thirdValue);
+                return thirdValue;
             }
-            Console.WriteLine(maxValue);
-            return maxValue;
-
+            return firstValue;
         }
 
-
-
-        public float FindMaxFloat(float firstValue, float secondValue, float thirdValue)
-        {
-            float floatMaxValue;
-            if (firstValue > secondValue && firstValue > thirdValue)
-            {
-                floatMaxValue = firstValue;
-            }
-            else if (secondValue > firstValue && secondValue > thirdValue)
-            {
-                floatMaxValue = secondValue;
-            }
-            else
-            {
-                floatMaxValue = thirdValue;
-            }
-            Console.WriteLine(floatMaxValue);
-            return floatMaxValue;
-        }
-        public string findMaxString(string firstValue, string secondValue, string thirdValue)
-        {
-            string floatMaxValue;
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
-            {
-                floatMaxValue = firstValue;
-            }
-            else if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
-            {
-                floatMaxValue = secondValue;
-            }
-            else
-            {
-                floatMaxValue = thirdValue;
-            }
-            Console.WriteLine(floatMaxValue);
-            return floatMaxValue;
-        }
     }
 }
