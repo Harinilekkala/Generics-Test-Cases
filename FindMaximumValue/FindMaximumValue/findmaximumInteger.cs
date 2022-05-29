@@ -48,5 +48,23 @@ namespace FindMaximumValue
             Console.WriteLine(floatMaxValue);
             return floatMaxValue;
         }
+        public string findMaxString(string firstValue, string secondValue, string thirdValue)
+        {
+            string floatMaxValue;
+            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+            {
+                floatMaxValue = firstValue;
+            }
+            else if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+            {
+                floatMaxValue = secondValue;
+            }
+            else
+            {
+                floatMaxValue = thirdValue;
+            }
+            Console.WriteLine(floatMaxValue);
+            return floatMaxValue;
+        }
     }
 }

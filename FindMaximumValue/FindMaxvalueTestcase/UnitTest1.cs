@@ -70,5 +70,32 @@ namespace FindMaxvalueTestcase
             Assert.AreEqual(C, findmaxvalue);
         }
     }
+    public class TestString
+    {
+        [Test]
+        public void findMaxString_MaximumValueAtFirstPosition()
+        {
+            string A = "Orange", B = "Banana", C = "Apple";
+            FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
+            string finalResult = findmaximumInteger.findMaxString(A, B, C);
+            Assert.AreEqual(A, finalResult);
+        }
+        [Test]
+        public void findMaxString_MaximumValueAtSecondPosition()
+        {
+            string A = "Banana", B = "Orange", C = "Apple";
+            FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
+            string finalResult = findmaximumInteger.findMaxString(A, B, C);
+            Assert.AreEqual(B, finalResult);
+        }
+        [Test]
+        public void findMaxString_MaximumValueAtThirdPosition()
+        {
+            string A = "Banana", B = "Apple", C = "Orange";
+            FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
+            string finalResult = findmaximumInteger.findMaxString(A, B, C);
+            Assert.AreEqual(C, finalResult);
+        }
+    }
 
 }
