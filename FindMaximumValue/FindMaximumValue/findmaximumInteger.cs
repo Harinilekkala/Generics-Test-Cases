@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 
 namespace FindMaximumValue
 {
-    public class findmaximumInteger
+    public class findMaximumValue<T> where T : IComparable<T>
     {
-        public T findMax<T>(T firstValue, T secondValue, T thirdValue) where T : IComparable<T>
+        T firstValue;
+        T secondValue;
+        T thirdValue;
+        public findMaximumValue(T firstValue, T secondValue, T thirdValue)
+        {
+            this.firstValue = firstValue;
+            this.secondValue = secondValue;
+            this.thirdValue = thirdValue;
+
+        }
+        public T findMax()
         {
             int intMaxValue;
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
@@ -19,7 +29,7 @@ namespace FindMaximumValue
                 return firstValue;
             }
             else if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0 ||
-                secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) > 0 ||
+                    secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) > 0 ||
                     secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) >= 0)
             {
                 Console.WriteLine(secondValue);
@@ -34,4 +44,5 @@ namespace FindMaximumValue
         }
 
     }
+
 }

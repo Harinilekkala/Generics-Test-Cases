@@ -10,12 +10,16 @@ public class Program
     
     public static void Main(string[] args)
     {
-        
-        
 
-        FindMaximumValue.findmaximumInteger findmaximumInteger = new FindMaximumValue.findmaximumInteger();
-        findmaximumInteger.findMax<int>(30, 20, 10);
-        findmaximumInteger.findMax<float>(10.5F, 20.5F, 30.5F);
-        findmaximumInteger.findMax<string>("Apple", "Banana", "Orange");
+
+        
+        FindMaximumValue.findMaximumValue<int> findMaximumValue = new FindMaximumValue.findMaximumValue<int>(10, 20, 30);
+        findMaximumValue.findMax();
+        FindMaximumValue.findMaximumValue<float> findMaxfloat = new FindMaximumValue.findMaximumValue<float>(10.5F, 20.5F, 30.5F);
+        findMaxfloat.findMax();
+        FindMaximumValue.findMaximumValue<string> findMaxstring = new FindMaximumValue.findMaximumValue<string>("Apple", "Banana", "Orange");
+        findMaxstring.findMax();
+        //new findMaximumValue<float>(10.5F, 20.5F, 30.5F).findMax();
+       // new findMaximumValue<string>("Apple", "Banana", "Orange").findMax();
     }
 }
